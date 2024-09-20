@@ -13,37 +13,37 @@ This repository contains the server-side implementation for the **Destroy** game
 
 ## Features
 
-- Player registration and movement management.\
-- Bullet generation and collision detection.\
-- Round-based gameplay with automatic score updates.\
-- Multi-round game with 4 players.\
-- Final score calculation and game reset functionality.\
+- Player registration and movement management.
+- Bullet generation and collision detection.
+- Round-based gameplay with automatic score updates.
+- Multi-round game with 4 players.
+- Final score calculation and game reset functionality.
 - Server-client communication using WebSockets (STOMP).
 
 ## Technologies Used
 
-- **Java 17**\
-- **Spring Boot** for the backend server.\
-- **STOMP** for WebSocket messaging.\
+- **Java 17**
+- **Spring Boot** for the backend server.
+- **STOMP** for WebSocket messaging.
 - **Maven** for dependency management.
 
 ## Endpoints and Messaging
 
 The server uses WebSocket STOMP messaging to communicate with clients. Below are some of the key destinations:
 
-- `/app/new-player`\
+- `/app/new-player`
   Registers a new player and adds them to the game.
 
-- `/app/update-player-movement`\
+- `/app/update-player-movement`
   Updates the position of the player on the grid.
 
-- `/app/update-player-score`\
+- `/app/update-player-score`
   Updates the score for a player.
 
-- `/app/new-round`\
+- `/app/new-round`
   Resets the game state for a new round.
 
-- `/app/new-game`\
+- `/app/new-game`
   Resets the game for a new game session.
 
 ## Game Flow
@@ -56,18 +56,18 @@ The server uses WebSocket STOMP messaging to communicate with clients. Below are
 
 ## Running the Server
 
-1\. Clone the repository.\
-   ```bash\
-   git clone <repository-url>\
-   cd shooting-gallery-server\
+1\. Clone the repository.
+   ```bash
+   git clone <repository-url>
+   cd shooting-gallery-server
    ```
 
 2\. Ensure that **Java 17** and **Maven** are installed on your system.
 
-3\. Build and run the server:\
-   ```bash\
-   mvn clean install\
-   mvn spring-boot:run\
+3\. Build and run the server:
+   ```bash
+   mvn clean install
+   mvn spring-boot:run
    ```
 
 4\. The server will start on the default port (e.g., `http://localhost:8080`), and clients can connect via WebSocket for game communication.
